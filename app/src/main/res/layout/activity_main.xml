@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="5dp"
+    >
+
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/resBG"
+        android:text=""
+        android:textColor="@color/TextResult"
+        android:padding="30dp"
+        android:textSize="40sp"
+        android:gravity="end|bottom"
+        />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+        android:layout_weight="1"
+       >
+<!--     onClick will work but not advised to do so. We should use onClickListener-->
+       <Button
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:backgroundTint="@color/buttons"
+           android:textSize="40sp"
+           android:id="@+id/seven"
+           android:text="@string/_7"
+           android:layout_weight="1"
+           android:onClick="onDigit"
+           android:layout_margin="2dp"
+           tools:ignore="NestedWeights,UsingOnClickInXml" />
+       <Button
+           android:layout_width="0dp"
+           android:id="@+id/eight"
+           android:text="@string/_8"
+           android:textSize="40sp"
+           android:backgroundTint="@color/buttons"
+           android:onClick="onDigit"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:layout_margin="2dp"/>
+       <Button
+           android:layout_width="0dp"
+           android:id="@+id/nine"
+           android:textSize="40sp"
+           android:layout_height="match_parent"
+           android:backgroundTint="@color/buttons"
+           android:text="@string/_9"
+           android:onClick="onDigit"
+           android:layout_weight="1"
+           android:layout_margin="2dp"/>
+       <Button
+           android:layout_width="0dp"
+           android:id="@+id/divide"
+           android:textSize="40sp"
+           android:onClick="onOperator"
+           android:layout_height="match_parent"
+           android:backgroundTint="@color/buttons"
+           android:text="@string/divide"
+           android:layout_weight="1"
+           android:layout_margin="2dp"/>
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+        <!--     onClick will work but not advised to do so. We should use onClickListener-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/buttons"
+            android:textSize="40sp"
+            android:id="@+id/four"
+            android:text="@string/_4"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:layout_margin="2dp"
+            tools:ignore="NestedWeights,UsingOnClickInXml" />
+        <Button
+            android:layout_width="0dp"
+            android:id="@+id/five"
+            android:text="@string/_5"
+            android:backgroundTint="@color/buttons"
+            android:textSize="40sp"
+            android:layout_height="match_parent"
+            android:onClick="onDigit"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:backgroundTint="@color/buttons"
+            android:id="@+id/six"
+            android:layout_height="match_parent"
+            android:textSize="40sp"
+            android:text="@string/_6"
+            android:onClick="onDigit"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/multiply"
+            android:backgroundTint="@color/buttons"
+            android:onClick="onOperator"
+            android:textSize="40sp"
+            android:text="@string/multiply"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+        <!--     onClick will work but not advised to do so. We should use onClickListener-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/one"
+            android:text="@string/_1"
+            android:backgroundTint="@color/buttons"
+            android:layout_weight="1"
+            android:textSize="40sp"
+            android:onClick="onDigit"
+            android:layout_margin="2dp"
+            tools:ignore="NestedWeights,UsingOnClickInXml" />
+        <Button
+            android:layout_width="0dp"
+            android:id="@+id/two"
+            android:text="@string/_2"
+            android:backgroundTint="@color/buttons"
+            android:textSize="40sp"
+            android:layout_height="match_parent"
+            android:onClick="onDigit"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:id="@+id/three"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/buttons"
+            android:textSize="40sp"
+            android:text="@string/_3"
+            android:onClick="onDigit"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:id="@+id/subtract"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/buttons"
+            android:onClick="onOperator"
+            android:textSize="40sp"
+            android:text="@string/subtract"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+        <!--     onClick will work but not advised to do so. We should use onClickListener-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/CLR"
+            android:backgroundTint="@color/buttons"
+            android:textSize="25sp"
+            android:onClick="onClear"
+            android:text="@string/clr"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            tools:ignore="NestedWeights,UsingOnClickInXml" />
+        <Button
+            android:layout_width="0dp"
+            android:id="@+id/zero"
+            android:text="@string/_0"
+            android:layout_height="match_parent"
+            android:onClick="onDigit"
+            android:textSize="40sp"
+            android:backgroundTint="@color/buttons"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/buttons"
+            android:onClick="onDecimal"
+            android:textSize="40sp"
+            android:id="@+id/decimal"
+            android:text="@string/decimal"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/buttons"
+            android:onClick="onOperator"
+            android:textSize="40sp"
+            android:id="@+id/add"
+            android:text="@string/add"
+            android:layout_weight="1"
+            android:layout_margin="2dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+        <!--     onClick will work but not advised to do so. We should use onClickListener-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/buttons"
+            android:onClick="onEquals"
+            android:textSize="40sp"
+            android:id="@+id/equals"
+            android:text="@string/equals"
+
+            android:layout_margin="2dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+
